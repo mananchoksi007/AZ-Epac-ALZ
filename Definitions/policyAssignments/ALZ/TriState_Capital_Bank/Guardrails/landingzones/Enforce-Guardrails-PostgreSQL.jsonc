@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-PostgreSQL",
+  "assignment": {
+    "name": "GR-PostgreSQL",
+    "displayName": "Enforce recommended guardrails for PostgreSQL",
+    "description": "This policy initiative is a group of policies that ensures PostgreSQL is compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for PostgreSQL",
+    "policySetName": "Enforce-Guardrails-PostgreSQL"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

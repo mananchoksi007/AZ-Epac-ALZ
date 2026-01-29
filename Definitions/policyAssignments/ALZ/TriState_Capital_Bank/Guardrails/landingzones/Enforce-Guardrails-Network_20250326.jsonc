@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-Network_20250326",
+  "assignment": {
+    "name": "GR-Network_20250326",
+    "displayName": "Enforce recommended guardrails for Network and Networking services",
+    "description": "This policy initiative is a group of policies that ensures Network and Networking services are compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Network and Networking services",
+    "policySetName": "Enforce-Guardrails-Network_20250326"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

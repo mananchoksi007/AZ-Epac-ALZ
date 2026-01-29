@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-OpenAI",
+  "assignment": {
+    "name": "GR-OpenAI",
+    "displayName": "Enforce recommended guardrails for Open AI (Cognitive Service)",
+    "description": "This policy initiative is a group of policies that ensures Open AI (Cognitive Service) is compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Open AI (Cognitive Service)",
+    "policySetName": "Enforce-Guardrails-OpenAI"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

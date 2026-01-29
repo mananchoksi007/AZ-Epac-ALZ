@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Encryption-CMK_20250218",
+  "assignment": {
+    "name": "EN-CMK_20250218",
+    "displayName": "Deny or Audit resources without Encryption with a customer-managed key (CMK)",
+    "description": "Deny or Audit resources without Encryption with a customer-managed key (CMK)"
+  },
+  "definitionEntry": {
+    "displayName": "Deny or Audit resources without Encryption with a customer-managed key (CMK)",
+    "policySetName": "Enforce-Encryption-CMK_20250218"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

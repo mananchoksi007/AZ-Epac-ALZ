@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "root/Deploy-MDFC-Config-H224",
+  "assignment": {
+    "name": "Deploy-MDFC-Config-H224",
+    "displayName": "Deploy Microsoft Defender for Cloud configuration",
+    "description": "Deploy Microsoft Defender for Cloud and Security Contacts"
+  },
+  "definitionEntry": {
+    "displayName": "Deploy Microsoft Defender for Cloud configuration",
+    "policySetName": "Deploy-MDFC-Config_20240319"
+  },
+  "definitionVersion": null,
+  "enforcementMode": "Default",
+  "parameters": {
+    "emailSecurityContact": "security_contact@replace_me",
+    "logAnalytics": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/placeholder/providers/Microsoft.OperationalInsights/workspaces/placeholder-la",
+    "ascExportResourceGroupName": "/providers/Microsoft.Management/managementGroups/placeholder-asc-export",
+    "ascExportResourceGroupLocation": "${default_location}",
+    "enableAscForServers": "Disabled",
+    "enableAscForServersVulnerabilityAssessments": "Disabled",
+    "enableAscForSql": "Disabled",
+    "enableAscForAppServices": "Disabled",
+    "enableAscForStorage": "Disabled",
+    "enableAscForContainers": "Disabled",
+    "enableAscForKeyVault": "Disabled",
+    "enableAscForSqlOnVm": "Disabled",
+    "enableAscForArm": "Disabled",
+    "enableAscForOssDb": "Disabled",
+    "enableAscForCosmosDbs": "Disabled",
+    "enableAscForCspm": "Disabled"
+  },
+  "nonComplianceMessages": [
+    {
+      "message": "Microsoft Defender for Cloud and Security Contacts must be deployed."
+    }
+  ],
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/alz"
+    ]
+  }
+}

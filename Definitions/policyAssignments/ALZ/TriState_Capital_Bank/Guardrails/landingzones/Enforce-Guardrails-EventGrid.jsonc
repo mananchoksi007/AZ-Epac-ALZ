@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-EventGrid",
+  "assignment": {
+    "name": "GR-EventGrid",
+    "displayName": "Enforce recommended guardrails for Event Grid",
+    "description": "This policy initiative is a group of policies that ensures Event Grid is compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Event Grid",
+    "policySetName": "Enforce-Guardrails-EventGrid"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

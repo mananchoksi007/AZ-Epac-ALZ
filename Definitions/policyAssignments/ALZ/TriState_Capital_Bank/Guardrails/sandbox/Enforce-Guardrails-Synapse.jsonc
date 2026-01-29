@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-Synapse",
+  "assignment": {
+    "name": "GR-Synapse",
+    "displayName": "Enforce recommended guardrails for Synapse workspaces",
+    "description": "This policy initiative is a group of policies that ensures Synapse workspaces is compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Synapse workspaces",
+    "policySetName": "Enforce-Guardrails-Synapse"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/Sandbox"
+    ]
+  }
+}

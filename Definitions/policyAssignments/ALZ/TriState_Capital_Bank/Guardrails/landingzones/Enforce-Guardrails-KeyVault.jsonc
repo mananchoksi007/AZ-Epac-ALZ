@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-KeyVault",
+  "assignment": {
+    "name": "GR-KeyVault",
+    "displayName": "Enforce recommended guardrails for Azure Key Vault",
+    "description": "Enforce recommended guardrails for Azure Key Vault."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Azure Key Vault",
+    "policySetName": "Enforce-Guardrails-KeyVault"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "root/Deploy-Diag-LogsCat",
+  "assignment": {
+    "name": "Deploy-Diag-LogsCat",
+    "displayName": "Enable category group resource logging for supported resources to Log Analytics",
+    "description": "Resource logs should be enabled to track activities and events that take place on your resources and give you visibility and insights into any changes that occur. This initiative deploys diagnostic setting using the allLogs category group to route logs to an Event Hub for all supported resources."
+  },
+  "definitionEntry": {
+    "displayName": "Enable category group resource logging for supported resources to Log Analytics",
+    "policySetId": "/providers/Microsoft.Authorization/policySetDefinitions/f5b29bc4-feca-4cc6-a58a-772dd5e290a5"
+  },
+  "definitionVersion": "1.*.*",
+  "enforcementMode": "Default",
+  "parameters": {
+    "logAnalytics": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/placeholder/providers/Microsoft.OperationalInsights/workspaces/placeholder-la"
+  },
+  "nonComplianceMessages": [
+    {
+      "message": "Diagnostic settings must be deployed to Azure services to forward logs to Log Analytics."
+    }
+  ],
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/alz"
+    ]
+  }
+}

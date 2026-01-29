@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "landing_zones/Deploy-GuestAttest",
+  "assignment": {
+    "name": "Deploy-GuestAttest",
+    "displayName": "Configure prerequisites to enable Guest Attestation on Trusted Launch enabled VMs",
+    "description": "Configure the Trusted Launch enabled virtual machines to automatically install the Guest Attestation extension and enable system-assigned managed identity to allow Azure Security Center to proactively attest and monitor the boot integrity. Boot integrity is attested via Remote Attestation. For more details, please refer to the following link - https://aka.ms/trustedlaunch."
+  },
+  "definitionEntry": {
+    "displayName": "Configure prerequisites to enable Guest Attestation on Trusted Launch enabled VMs",
+    "policySetId": "/providers/Microsoft.Authorization/policySetDefinitions/281d9e47-d14d-4f05-b8eb-18f2c4a034ff"
+  },
+  "definitionVersion": "3.*.*-preview",
+  "enforcementMode": "Default",
+  "parameters": {
+    "attestationEndpoint": ""
+  },
+  "nonComplianceMessages": [
+    {
+      "message": "Trusted Launch Guest Attestation must be configured on applicable virtual machines."
+    }
+  ],
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "Enforce-Guardrails-ServiceBus",
+  "assignment": {
+    "name": "GR-ServiceBus",
+    "displayName": "Enforce recommended guardrails for Service Bus",
+    "description": "This policy initiative is a group of policies that ensures Service Bus is compliant per regulated Landing Zones."
+  },
+  "definitionEntry": {
+    "displayName": "Enforce recommended guardrails for Service Bus",
+    "policySetName": "Enforce-Guardrails-ServiceBus"
+  },
+  "enforcementMode": "Default",
+  "parameters": {},
+  "scope": {
+    "TriState_Capital_Bank": [
+      "/providers/Microsoft.Management/managementGroups/landingzones"
+    ]
+  }
+}

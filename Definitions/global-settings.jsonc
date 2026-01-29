@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/global-settings-schema.json",
+    "pacOwnerId": "11111111-2222-3333-4444-555555555555",
+    "pacEnvironments": [
+        {
+            "pacSelector": "TriState_Capital_Bank",
+            "cloud": "AzureCloud",
+            "tenantId": "5ae67d54-efcb-4d90-b4fd-8e084a188a4f",
+            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/TriState_Capital_Bank",
+            "desiredState": { // [optional]
+                "strategy": "full", // default full
+                "keepDfcSecurityAssignments": true, // default false
+                "doNotDisableDeprecatedPolicies": false
+            },
+            "globalNotScopes": [],
+            "managedIdentityLocation": "eastus2"
+        }
+    ]
+}
